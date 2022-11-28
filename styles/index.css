@@ -1,0 +1,79 @@
+/* import font from local file */
+@font-face {
+  font-family: "MSFont";
+  src: url("../assets/font.ttf");
+}
+
+:root {
+  --gray: rgb(195, 195, 195);
+  --dark-gray: rgb(137, 137, 137);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "MSFont", "Comic Sans", sans-serif;
+}
+
+body {
+  background-color: rgb(52, 120, 123);
+  color: white;
+
+  min-height: 100vh;
+  min-width: 100vw;
+
+  display: grid;
+
+  grid-template-rows: auto min-content;
+
+  filter: blur(0.5px);
+}
+
+nav {
+  display: flex;
+  gap: 5px;
+
+  grid-row: 2;
+  place-self: bottom;
+
+  height: 3em;
+
+  place-items: stretch center;
+
+  background-color: var(--gray);
+  color: black;
+  border-top: 0.05cm solid white;
+
+  padding: 5px;
+}
+
+nav > section {
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  letter-spacing: 1px;
+
+  display: flex;
+  place-items: center;
+
+  padding: 10px 5px;
+
+  text-shadow: 0.5px 0.5px 0 black;
+}
+
+nav section:last-child {
+  margin-left: auto;
+  text-shadow: unset;
+
+  font-size: 0.9em;
+
+  padding: 0 15px;
+
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  border-top: 2px solid var(--dark-gray);
+  border-left: 2px solid var(--dark-gray);
+}
